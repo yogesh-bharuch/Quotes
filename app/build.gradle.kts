@@ -94,4 +94,6 @@ dependencies {
     // To use Kotlin Symbol Processing (KSP)
     ksp("androidx.room:room-compiler:$room_version")
 //Room dependencies
+
+    implementation("com.google.com.gson:gson:2.8.6")
 }

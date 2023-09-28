@@ -87,9 +87,10 @@ fun TextComponentPreview(){
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TextFieldComponent(name:String, onTextChanged : (name:String)->Unit
+fun TextFieldComponent(name:String,
+                       onTextChanged : (name:String)->Unit
 ){
-    var currentValue by remember{mutableStateOf("") }
+    //var currentValue by remember{mutableStateOf("") }
     val localFocusManager = LocalFocusManager.current
     OutlinedTextField(
         modifier= Modifier.fillMaxWidth(),
@@ -106,7 +107,8 @@ fun TextFieldComponent(name:String, onTextChanged : (name:String)->Unit
 }
 
 @Composable
-fun MyCard(image: Int, selected: Boolean,
+fun MyCard(image: Int,
+           selected: Boolean,
              onGameSelected:(gameName:String)->Unit){
     Card (
         shape = RoundedCornerShape(10.dp),
@@ -144,7 +146,8 @@ fun MyCard(image: Int, selected: Boolean,
 }
 
 @Composable
-fun MyButtonComponent(buttonText: String, onClickAction : (String) -> Unit){
+fun MyButtonComponent(buttonText: String,
+                      onClickAction : (String) -> Unit){
     Button(modifier = Modifier.fillMaxWidth(),
         onClick = {
              onClickAction(buttonText) })
